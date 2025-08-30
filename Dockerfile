@@ -1,7 +1,7 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
-# Install dependencies
+# Install requirements for add-on
 RUN apk add --no-cache \
     python3 \
     py3-pip \
@@ -10,7 +10,8 @@ RUN apk add --no-cache \
     libsndfile-dev \
     ffmpeg
 
-# Create app directory
+# Python 3 serves the current working dir
+# So let's set it to our add-on persistent data directory.
 WORKDIR /app
 
 # Clone the Kitten-TTS-Server repository
