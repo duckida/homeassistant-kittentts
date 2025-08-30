@@ -2,12 +2,12 @@ ARG BUILD_FROM=ghcr.io/home-assistant/amd64-base:3.19
 FROM $BUILD_FROM
 
 # Install requirements for add-on
-RUN apk add --no-cache 
-    python3 
-    py3-pip 
-    git 
-    espeak 
-    libsndfile-dev 
+RUN apk add --no-cache \
+    python3 \
+    py3-pip \
+    git \
+    espeak \
+    libsndfile-dev \
     ffmpeg
 
 # Create a virtual environment
