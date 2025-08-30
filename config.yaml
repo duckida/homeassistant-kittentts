@@ -1,0 +1,24 @@
+name: "Kitten TTS Server"
+description: "Self-hosted, ultra-lightweight text-to-speech engine with Web UI and API"
+version: "1.0.0"
+slug: "kitten_tts"
+init: false
+arch:
+  - amd64
+  - armv7
+  - aarch64
+url: "https://github.com/devnen/Kitten-TTS-Server"
+startup: services
+boot: auto
+ports:
+  8005/tcp: 8005
+ports_description:
+  8005/tcp: "Kitten TTS Server Web UI and API"
+map:
+  - "share:rw"
+options:
+  mode: "cpu"
+  tts_language: "en"
+schema:
+  mode: "list(cpu|gpu)"
+  tts_language: "str"
