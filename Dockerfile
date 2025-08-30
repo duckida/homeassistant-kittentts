@@ -10,6 +10,10 @@ RUN apk add --no-cache \
     libsndfile-dev \
     ffmpeg
 
+# Create a virtual environment
+RUN python3 -m venv /opt/venv
+ENV PATH="/opt/venv/bin:$PATH"
+
 # Python 3 serves the current working dir
 # So let's set it to our add-on persistent data directory.
 WORKDIR /app
