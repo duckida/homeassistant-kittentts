@@ -21,17 +21,12 @@ WORKDIR /app
 # Clone the Kitten-TTS-Server repository
 RUN git clone https://github.com/devnen/Kitten-TTS-Server.git .
 
-# Install build dependencies for onnxruntime
+# Install build dependencies
 RUN apk add --no-cache build-base cmake linux-headers
 
-# Install Python requirements
+# Install Python requirements (excluding onnxruntime)
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
-
-# For GPU support, we'll install additional packages at runtime based on config
-# Install build dependencies for potential GPU support
-RUN pip install --upgrade pip
-RUN pip install onnxruntime-gpu || echo "onnxruntime-gpu not installed, using CPU only"
 
 # Expose port
 EXPOSE 8005

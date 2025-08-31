@@ -1,16 +1,17 @@
-# requirements.txt (CPU Installation)
+# requirements-nvidia.txt (NVIDIA GPU Installation)
 
-# Web Framework
-fastapi
-uvicorn[standard]
-
-# KittenTTS Core Dependencies
+# KittenTTS Core Dependencies (GPU Version)
+onnxruntime-gpu
 soundfile
 numpy
 huggingface_hub
 phonemizer
 misaki[en]>=0.9.4
 espeakng_loader==0.2.0
+
+# Web Framework
+fastapi
+uvicorn[standard]
 
 # Configuration & Utilities
 PyYAML
