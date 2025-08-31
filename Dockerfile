@@ -21,6 +21,9 @@ WORKDIR /app
 # Clone the Kitten-TTS-Server repository
 RUN git clone https://github.com/devnen/Kitten-TTS-Server.git .
 
+# Copy our requirements.txt file to replace the one from the cloned repository
+COPY requirements.txt .
+
 # Install build dependencies
 RUN apk add --no-cache build-base cmake linux-headers
 

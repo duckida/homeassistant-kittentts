@@ -1,10 +1,10 @@
-# requirements.txt (CPU Installation)
+# requirements.txt (CPU Installation for Home Assistant Addon)
 
 # Web Framework
 fastapi
 uvicorn[standard]
 
-# KittenTTS Core Dependencies
+# KittenTTS Core Dependencies (excluding onnxruntime)
 soundfile
 numpy
 huggingface_hub
