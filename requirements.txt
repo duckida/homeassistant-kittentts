@@ -6,11 +6,11 @@ uvicorn[standard]
 
 # KittenTTS Core Dependencies (excluding onnxruntime)
 soundfile
-numpy
+numpy<2.0.0
 huggingface_hub
 phonemizer
 misaki[en]>=0.9.4
-espeakng_loader>=0.2.0
+espeakng_loader>=0.1.51.0
 
 # Configuration & Utilities
 PyYAML
