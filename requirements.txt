@@ -10,7 +10,7 @@ numpy
 huggingface_hub
 phonemizer
 misaki[en]>=0.9.4
-espeakng_loader==0.2.0
+espeakng_loader>=0.2.0
 
 # Configuration & Utilities
 PyYAML
