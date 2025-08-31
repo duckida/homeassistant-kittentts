@@ -6,7 +6,7 @@ RUN apk add --no-cache \
     python3 \
     py3-pip \
     git \
-    espeak-ng \
+    espeak \
     libsndfile-dev \
     ffmpeg \
     py3-numpy
