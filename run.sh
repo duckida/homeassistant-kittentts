@@ -9,8 +9,8 @@ bashio::log.info "Starting Kitten TTS Server in ${MODE} mode"
 # Set environment variables
 export TTS_LANGUAGE=${LANGUAGE}
 
-# Install onnxruntime at runtime
-bashio::log.info "Installing onnxruntime"
+# Install onnxruntime and other required packages at runtime
+bashio::log.info "Installing onnxruntime and other required packages"
 cd /app
 pip install onnxruntime
 

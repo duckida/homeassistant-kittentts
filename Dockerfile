@@ -6,9 +6,10 @@ RUN apk add --no-cache \
     python3 \
     py3-pip \
     git \
-    espeak \
+    espeak-ng \
     libsndfile-dev \
-    ffmpeg
+    ffmpeg \
+    py3-numpy
 
 # Create a virtual environment
 RUN python3 -m venv /opt/venv
@@ -27,7 +28,7 @@ COPY requirements.txt .
 # Install build dependencies
 RUN apk add --no-cache build-base cmake linux-headers
 
-# Install Python requirements (excluding onnxruntime)
+# Install Python requirements (excluding packages we'll install at runtime)
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 

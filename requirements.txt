@@ -4,9 +4,8 @@
 fastapi
 uvicorn[standard]
 
-# KittenTTS Core Dependencies (excluding onnxruntime)
+# KittenTTS Core Dependencies (excluding onnxruntime and packages installed via apk)
 soundfile
-numpy<2.0.0
 huggingface_hub
 phonemizer
 misaki[en]>=0.9.4
